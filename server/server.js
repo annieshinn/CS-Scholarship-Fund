@@ -3,6 +3,11 @@ const { get } = require('http');
 const path = require('path');
 const PORT = 3000;
 const app = express();
+const mongoose = require('mongoose');
+
+mongoose.connect(keys.mongodb.dbURI, () => {
+  console.log('connected to mongod')
+});
 
 // parsing request body in JSON format
 app.use(express.json());
@@ -22,6 +27,7 @@ const donationRouter = require('./routes/donationRoutes');
 const userRouter = require('./routes/userRoutes');
 const locationRouter = require('./routes/locationRoutes');
 const authRouter = require('./routes/authRoutes')
+// const passportSetup = require('./config/passport-setup')
 
 app.use('/location', locationRouter);
 app.use('/donation', donationRouter);

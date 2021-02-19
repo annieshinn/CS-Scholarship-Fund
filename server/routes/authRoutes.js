@@ -6,21 +6,24 @@
  */
 
 const router = require('express').Router();
-const passport = require('passport')
+const passport = require('passport');
 
-router.get('/logout',(req,res) => {
+
+
+router.get('/logout', (req,res) => {
   //logging out with passport
   res.send('logging out')
 })
 
-router.get('/google', passport.authenticate('google',{
-  scope: ['profile','email']
+router.get('/google',passport.authenticate('google',{
+scope ['profile']
 }));
 
-//callback route for google to redirect to
-router.get('/google/redirect',passport.authenticate('google'),
-  (req,res) => {
-    res.send('i hate this')
+
+//callback route for google to donation
+router.get('/google/donation',passport.authenticate('google'),(req,res) => {
+    res.send('you reached the donation page')
 });
+
 
 module.exports = router;
