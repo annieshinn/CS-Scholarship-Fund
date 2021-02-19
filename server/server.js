@@ -15,19 +15,18 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
 });
 
-
-
 /**
  * route handlers
  */
 const donationRouter = require('./routes/donationRoutes');
 const userRouter = require('./routes/userRoutes');
 const locationRouter = require('./routes/locationRoutes');
+const authRouter = require('./routes/authRoutes')
 
 app.use('/location', locationRouter);
 app.use('/donation', donationRouter);
 app.use('/user', userRouter);
-
+app.use('/auth', authRouter);
 
 app.use((req, res) => res.status(404).send('This is not the page you\'re looking for...'));
 
