@@ -48,7 +48,7 @@ export default class DemoMap extends Component {
     ));
 
     return this.state.cities ? (
-      <div >
+      <div id='mapContainer'>
         <Map
           center={[myLocation.lat, myLocation.lng]}
           zoom={myLocation.zoom}

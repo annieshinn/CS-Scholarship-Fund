@@ -1,40 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Oswald&display=swap');
+
 body {
-    background-color: green;
-    margin: 0;
-}
-#login {
-    background-color: greenyellow;
-    display: flex;
-    justify-items: center;
-    align-items : center;
-    justify-content: space-evenly;
-    height: 50px;
-    
-}
-.nav {
+  /* background: #1BB0CE;
+  background: -moz-linear-gradient(top, #1BB0CE 0%, #0068A4 50%, #0037C5 100%);
+  background: -webkit-linear-gradient(top, #1BB0CE 0%, #0068A4 50%, #0037C5 100%);
+  background: linear-gradient(to bottom, #1BB0CE 0%, #0068A4 50%, #0037C5 100%); */
+  background: #FFFFFF;
 
-  background-color: blue;
-  height: 200px;
+  font-family: "Oswald", "Arial";
+  letter-spacing: 2px;
+  color: rgb(231, 231, 231);
+  position: relative;
+
+  --main-bg-color: rgba(15,49,129,.9);
 }
 
-#membersBody{
-  background-color: grey;
+/* CS Alumni Scholarship */
+h1{
+  text-align: center;
+  background-color: var(--main-bg-color);
+  color: #FFFFFF;
 }
 
-.container {
+/* subheadings like login */
+h2{
+  text-align: center;
+}
+
+/* total raised */
+h3{
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+#header{
+  background-color: #FFFFFF;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 5px solid var(--main-bg-color);
+  width: 70%;
+  margin: auto;
 }
 
 .form {
+  background-color: var(--main-bg-color);
+  padding: 10px;
+  margin: auto;
+  margin-top: 20px;
+  width: 300px;
+  height: 400px;
+
   display: flex;
   flex-direction: column;
-  width: 300px;
-  margin: 20px 20px;
+  align-items: center;
+  justify-content: space-around;
+
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #1d20296c;
+}
+
+#notHeader{
+  /* background-color: red;
+  display: grid;
+  grid-template-areas: 
+  "map contents contents"
+  "map contents contents" */
+}
+
+#mapContainer {
+  background-color: var(--main-bg-color);
+  height: 500px;
+  width: 500px;
+  display: none;
+
+  position: absolute;
+  right: 0; left: 0;
+  top: 150px;
+  margin: auto;
+  z-index: 1;
+}
+
+#seeMap {
+  display: inline;
 }
 
 .leaflet-container {
-  height: 400px;
-  width: 80%;
-  margin: 0 auto;
+  height: 90%;
+  width: 90%;
+  margin: auto;
+}
+
+#about{
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+#mapButton{
+}
+
+button{
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px #1d20296c;
+  border: 2px solid var(--main-bg-color);
 }

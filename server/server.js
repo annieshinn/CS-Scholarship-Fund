@@ -3,11 +3,11 @@ const { get } = require('http');
 const path = require('path');
 const PORT = 3000;
 const app = express();
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-mongoose.connect(keys.mongodb.dbURI, () => {
-  console.log('connected to mongod')
-});
+// mongoose.connect(keys.mongodb.dbURI, () => {
+//   console.log('connected to mongod')
+// });
 
 // parsing request body in JSON format
 app.use(express.json());
